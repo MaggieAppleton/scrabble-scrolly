@@ -2,12 +2,24 @@
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+  import { onMount } from "svelte";
+
   gsap.registerPlugin(ScrollTrigger);
 
-  import { animate } from "./animate";
-  let desc = false;
-
   export let name;
+
+  let paragraph;
+
+  onMount(() => {
+    gsap.to(paragraph, {
+      scrollTrigger: {
+        trigger: paragraph,
+        scrub: true
+      },
+      x: 500,
+      duration: 3
+    });
+  });
 </script>
 
 <style>
@@ -34,8 +46,7 @@
 
 <main>
   <h1 id="heading">Hello {name}!</h1>
-  <p
-    use:animate={{ type: 'to', scrollTrigger: '#heading', duration: 3, x: 500, onComplete: () => (desc = true) }}>
+  <p bind:this={paragraph}>
     Visit the
     <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
     to learn how to build Svelte apps.
