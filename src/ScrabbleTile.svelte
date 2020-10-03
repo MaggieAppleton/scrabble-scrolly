@@ -50,8 +50,8 @@
 </style>
 
 <section
+    id={heading}
     class="section"
-    id="section-1"
     bind:this={section}
 >
     <div class="column">
