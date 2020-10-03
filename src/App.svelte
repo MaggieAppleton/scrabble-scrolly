@@ -6,15 +6,8 @@
 </script>
 
 <style>
-    main {
-        text-align: center;
-        max-width: 240px;
-    }
-
-    @media (min-width: 640px) {
-        main {
-            max-width: none;
-        }
+    header {
+        height: 100vh;
     }
 </style>
 
