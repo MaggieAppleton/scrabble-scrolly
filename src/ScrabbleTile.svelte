@@ -20,6 +20,7 @@
                 trigger: section,
                 markers: true,
                 scrub: 1,
+                pin: true
             },
             scale: 2,
             duration: 2
