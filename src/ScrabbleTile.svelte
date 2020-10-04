@@ -45,7 +45,7 @@
     }
 
     .two-letter {
-        font-size: 18em;
+        font-size: 16em;
     }
 </style>
 
