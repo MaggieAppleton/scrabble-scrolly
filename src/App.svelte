@@ -19,6 +19,7 @@
                 <a href={`#${heading}`}>{heading}</a>
             </li>
         {/each}
+        <h1>The two-letter Scrabble thing</h1>
         </ul>
     </header>
     {#each data as { heading, definition, score, dictionary }}
